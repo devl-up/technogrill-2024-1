@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechnoGrill", "src\TechnoGrill\TechnoGrill.csproj", "{7E37BA83-B9CE-496C-B0D4-B79C625903ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2FE8B779-569C-44A2-9B56-BCED885CA36D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechnoGrill.Tests", "test\TechnoGrill.Tests\TechnoGrill.Tests.csproj", "{DAE06F75-5BF4-45CE-86D7-B1E2AD2E2EDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechnoGrill.IntegrationTests", "test\TechnoGrill.IntegrationTests\TechnoGrill.IntegrationTests.csproj", "{331B9C18-6D5B-4C53-8949-5FDF500325A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E37BA83-B9CE-496C-B0D4-B79C625903ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E37BA83-B9CE-496C-B0D4-B79C625903ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E37BA83-B9CE-496C-B0D4-B79C625903ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E37BA83-B9CE-496C-B0D4-B79C625903ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAE06F75-5BF4-45CE-86D7-B1E2AD2E2EDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE06F75-5BF4-45CE-86D7-B1E2AD2E2EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE06F75-5BF4-45CE-86D7-B1E2AD2E2EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE06F75-5BF4-45CE-86D7-B1E2AD2E2EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{331B9C18-6D5B-4C53-8949-5FDF500325A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{331B9C18-6D5B-4C53-8949-5FDF500325A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{331B9C18-6D5B-4C53-8949-5FDF500325A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{331B9C18-6D5B-4C53-8949-5FDF500325A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DAE06F75-5BF4-45CE-86D7-B1E2AD2E2EDE} = {2FE8B779-569C-44A2-9B56-BCED885CA36D}
+		{331B9C18-6D5B-4C53-8949-5FDF500325A3} = {2FE8B779-569C-44A2-9B56-BCED885CA36D}
+	EndGlobalSection
+EndGlobal
