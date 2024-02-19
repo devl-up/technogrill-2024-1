@@ -14,7 +14,7 @@ jobs:
       postgres:
         image: postgres
         env:
-          POSTGRES_HOST: postgres
+          POSTGRES_HOST: localhost
           POSTGRES_PORT: 5432
           POSTGRES_PASSWORD: postgres
         options: >-
@@ -37,4 +37,4 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal --environment TEST_CONNECTION_STRING="Host=postgres;Port=5432;Database=integration-tests;Username=postgres;Password=postgres;"
+      run: dotnet test --no-build --verbosity normal --environment TEST_CONNECTION_STRING="Host=localhost;Port=5432;Database=integration-tests;Username=postgres;Password=postgres;"
