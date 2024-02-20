@@ -42,6 +42,5 @@ jobs:
       run: dotnet test --no-build --verbosity normal --environment TEST_CONNECTION_STRING="Host=localhost;Port=5432;Database=integration-tests;Username=postgres;Password=postgres;" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v4.0.1
-      env:
+      with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        slug: devl-up/technogrill-2024-1
