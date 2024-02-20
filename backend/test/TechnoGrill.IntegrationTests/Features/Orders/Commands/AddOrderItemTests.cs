@@ -33,7 +33,7 @@ public sealed class AddOrderItemTests(DatabaseFixture databaseFixture)
             Price = 10
         };
 
-        await using (var context = databaseFixture.CreateContext())
+        await using (var context = DatabaseFixture.CreateContext())
         {
             await context.Set<OrderMemento>().AddAsync(order.ToMemento());
             await context.Set<Product>().AddAsync(product);
@@ -48,7 +48,7 @@ public sealed class AddOrderItemTests(DatabaseFixture databaseFixture)
         // Assert
         Assert.Equal(HttpStatusCode.NoContent, response.StatusCode);
 
-        await using (var context = databaseFixture.CreateContext())
+        await using (var context = DatabaseFixture.CreateContext())
         {
             var orderItemCount = await context.Set<OrderItemMemento>()
                 .CountAsync(o => o.OrderId == orderId);

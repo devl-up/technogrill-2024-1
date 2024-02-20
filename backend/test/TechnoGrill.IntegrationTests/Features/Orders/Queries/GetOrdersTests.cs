@@ -27,7 +27,7 @@ public sealed class GetOrdersTests(DatabaseFixture databaseFixture)
             new(Guid.NewGuid())
         };
 
-        await using (var context = databaseFixture.CreateContext())
+        await using (var context = DatabaseFixture.CreateContext())
         {
             await context.Set<OrderMemento>().AddRangeAsync(orders.Select(o => o.ToMemento()));
             await context.SaveChangesAsync();

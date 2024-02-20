@@ -29,7 +29,7 @@ public sealed class DeleteProductTests(DatabaseFixture databaseFixture)
             Price = 10
         };
 
-        await using (var context = databaseFixture.CreateContext())
+        await using (var context = DatabaseFixture.CreateContext())
         {
             await context.Set<Product>().AddAsync(product);
             await context.SaveChangesAsync();
@@ -45,7 +45,7 @@ public sealed class DeleteProductTests(DatabaseFixture databaseFixture)
         // Assert
         Assert.Equal(HttpStatusCode.NoContent, response.StatusCode);
 
-        await using (var context = databaseFixture.CreateContext())
+        await using (var context = DatabaseFixture.CreateContext())
         {
             var productCount = await context.Set<Product>()
                 .CountAsync();

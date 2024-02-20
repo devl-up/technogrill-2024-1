@@ -36,7 +36,7 @@ public sealed class DeleteOrderItemTests(DatabaseFixture databaseFixture)
         var orderItemId = Guid.NewGuid();
         order.AddItem(orderItemId, product.Id, 10);
 
-        await using (var context = databaseFixture.CreateContext())
+        await using (var context = DatabaseFixture.CreateContext())
         {
             await context.Set<OrderMemento>().AddAsync(order.ToMemento());
             await context.Set<Product>().AddAsync(product);
@@ -51,7 +51,7 @@ public sealed class DeleteOrderItemTests(DatabaseFixture databaseFixture)
         // Assert
         Assert.Equal(HttpStatusCode.NoContent, response.StatusCode);
 
-        await using (var context = databaseFixture.CreateContext())
+        await using (var context = DatabaseFixture.CreateContext())
         {
             var orderItemCount = await context.Set<OrderItemMemento>()
                 .CountAsync(o => o.Id == orderItemId);

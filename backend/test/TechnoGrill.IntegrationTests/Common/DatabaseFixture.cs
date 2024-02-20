@@ -27,7 +27,7 @@ public sealed class DatabaseFixture : IAsyncLifetime
         return Task.CompletedTask;
     }
 
-    public AppDbContext CreateContext()
+    public static AppDbContext CreateContext()
     {
         var options = new DbContextOptionsBuilder<AppDbContext>()
             .UseNpgsql(Environment.GetEnvironmentVariable("TEST_CONNECTION_STRING"))

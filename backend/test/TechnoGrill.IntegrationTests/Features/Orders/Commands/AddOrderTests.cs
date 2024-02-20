@@ -28,7 +28,7 @@ public sealed class AddOrderTests(DatabaseFixture databaseFixture)
         // Assert
         Assert.Equal(HttpStatusCode.NoContent, response.StatusCode);
 
-        await using var context = databaseFixture.CreateContext();
+        await using var context = DatabaseFixture.CreateContext();
 
         var orderCount = await context.Set<OrderMemento>()
             .CountAsync(o => o.Id == command.Id);

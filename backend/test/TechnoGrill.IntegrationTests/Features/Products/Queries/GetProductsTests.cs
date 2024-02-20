@@ -38,7 +38,7 @@ public class GetProductsTests(DatabaseFixture databaseFixture)
             }
         };
 
-        await using (var context = databaseFixture.CreateContext())
+        await using (var context = DatabaseFixture.CreateContext())
         {
             await context.Set<Product>().AddRangeAsync(products);
             await context.SaveChangesAsync();
